@@ -17,8 +17,20 @@
 # nome = input("Digite um nome: ")
 # print(contatos.get(nome , "Nome não encontrado"))
 
+#vingadores = {"Chris Evans":"Capitão América" , "Mark Ruffalo":"Hulk", "Tom Hiddleston":"Loki", "Chris Hemsworth":"Thor","Robert Downey Jr":"Homem de Ferro","Scarlett Johansson":"Viúva Negra"}
+#print(vingadores.get("Chris Evans"))
+#print(vingadores.get("Mark Ruffalo"))
+#ving = input("Digite um nome para buscar seu personagem: ").title()
+#print(vingadores.get(ving , "Personagem não encontrado"))
+
+# while ving not in vingadores or ving ==0:
+#     print("Nome não encontrado, tente novamente")
+#     ving = input("Digite um nome para buscar seu personagem ou 0 para sair: ").title()
+#     if ving == "0" :        
+#         break
+# print(vingadores.get(ving , "Nome não encontrado"))
+
 vingadores = {"Chris Evans":"Capitão América" , "Mark Ruffalo":"Hulk", "Tom Hiddleston":"Loki", "Chris Hemsworth":"Thor","Robert Downey Jr":"Homem de Ferro","Scarlett Johansson":"Viúva Negra"}
-print(vingadores.get("Chris Evans"))
-print(vingadores.get("Mark Ruffalo"))
-ving = input("Digite um nome para buscar seu personagem: ")
-print(vingadores.get(ving , "Personagem não encontrado"))
+print(vingadores)
+vingadores["Mark Ruffalo"] = "Hulk Gladiador"
+print(vingadores)
