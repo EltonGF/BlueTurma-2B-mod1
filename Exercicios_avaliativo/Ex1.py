@@ -20,9 +20,9 @@ else:
     print("O resultado das soma resultou em um número ímpar.")
 
 print("A multiplicação dos números é igual a",multip)
-print("O quociente da divisão entre os números 7é:",div)
+print("O quociente da divisão entre os números é:",div)
 if multip > 40 :
     resultado = multip / div
     print(f"O valor obtido através da divisão do resultado da multiplicação e da divisão inteira é {resultado:.2f}")
 else :
-    print(f"O resultado da multiplicação foi {multip:.2f},ou seja, menor que 40")
+    print("O resultado da multiplicação foi",multip,"ou seja, menor que 40")
