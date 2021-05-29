@@ -125,28 +125,45 @@ else :
 #******** A PARTIR DAQUI COMEÇA OS EVENTOS DO TRABALHO******
 print()
 print("Você está evoluindo no seu projeto. Continue trabalhando...")
-#tipo_problema = random.randint(0,51)
-tipo_problema = 25   
+print()
+tipo_problema = random.randint(0,61)   
 if tipo_problema >= 0 and tipo_problema < 7 :
     print("Algo inesperado aconteceu. A rede de computadores caiu. Você terá que aguardar o suporte de redes resolver o problema.")
     tempo -= 60
 
 elif tipo_problema >= 7 and tipo_problema < 20 :
     print("Seu amigo necessita de sua ajuda para algo importante. Lembre-se que você foi ajudado quando precisou. O que você fará? ")
-    escolha = int(input("Informe sua descisão: [1] Ajudar. [2] Ignorar e continuar em seu projeto."))
+    escolha = int(input("Informe sua descisão: [1] Ajudar. [2] Ignorar e continuar em seu projeto. "))
     if escolha == 1 :
         print("Você conseguiu resolver o problema do seu amigo. Parabéns!!! Agora corra para terminar o projeto.")
         tempo -= 40
     else :
         print("Você escolheu focar no seu projeto...então mãos a obra.")
 
-elif tipo_problema >= 20 and tipo_problema < 30 :
+elif tipo_problema >= 20 and tipo_problema < 35 :
     print("Você se deparou com um problema no seu projeto e não sabe como resolver.\nVocê deverá realizar uma pesquisa e encontrar uma solução o mais rápido possível.")
-    escolha = int(input("O que deseja fazer: [1] Continuar tentando a resolução do problema. [2] Realizar uma pesquisa"))
-    while escolha == 1 :
+    escolha = int(input("O que deseja fazer: [1] Continuar tentando a resolução do problema. [2] Realizar uma pesquisa. "))
+    while escolha == 1 :  # While para introduzir um elemento a mais do que foi aprendido no Módulo 1
         print("Você está perdendo muito tempo. Seria melhor realizar uma pesquisa...")
         tempo -= 40
-        escolha = int(input("O que deseja fazer: [1] Continuar tentando a resolução do problema. [2] Realizar uma pesquisa"))
+        escolha = int(input("O que deseja fazer: [1] Continuar tentando a resolução do problema. [2] Realizar uma pesquisa. "))
     print("Muito bom. Você encontrou o que precisava. Agora lembre-se que o prazo para entregar seu projeto está se esgotando.")
     tempo -= 40
 
+elif tipo_problema >= 35 and tipo_problema < 45 :
+    print("Houve um acidente perto do seu trabalho e resultou em queda de energia.\nVocê precisará aguardar a companhia elétrica restaurar a energia.")
+    escolha = int(input("Durante esse tempo o que deseja fazer: [1] Descansar um pouco. [2] Comer. [3] Aguardar sem sair do local. "))
+    if escolha == 1 :
+        print("Você agora está mais disposto. Aproveite e complete o seu projeto.")
+        sono = sono + 10 #Aqui só simulei a barra de sono
+    elif escolha == 2 :
+        print("Você agora está alimentado e disposto. Aproveite e complete o seu projeto.")
+        energia = energia + 10 #Aqui só simulei a barra de energia
+    else :
+        print("A companhia elétrica demorou para restabelecer a energia. Você terá que acelerar para terminar seu projeto.\nMas não desanime seu objetivo está logo ali...")
+        tempo -= 70
+
+else :
+    print("Está tudo correndo bem, sem imprevistos. Agora falta pouco pra você conquistar seu grande objetivo. LET´S GO!!!")
+
+print("Você atingiu seu objetivo.")
